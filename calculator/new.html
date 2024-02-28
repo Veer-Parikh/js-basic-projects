@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calculator
+    </title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+        }
+        .num{
+            display:flex;
+        }
+        button{
+            width:21%;
+            margin:1px;
+        }
+        .screen{
+            border:solid 1px rgb(255, 254, 254);
+            padding:1px;
+            margin:5px
+        }
+        .b{
+            height:60px;
+            width:95px;
+            font-size: 30px;
+            background-color: orange;
+        }
+        .b:hover{
+            background-color: rgba(255, 166, 0, 0.699);
+        }
+    </style>
+    <script src="calc.js"></script>
+</head>
+<body>
+    <div style="border: solid 3px black;padding:10px;width:400px;height:385px;background-color: rgba(0, 0, 0, 0.856);"> 
+        <div style="display: flex;" class="screen">
+			<div id="numdisplay" style="height:50px;font-size:40px;color:aliceblue;padding:10px"><span>0</span></div>
+        </div>
+        <div class="new">
+            <button class="b" onclick="appendToInput2(this.name)" name="reset" style="width:196px;height:50px;font-size: 35px;font-family:'Times New Roman', Times, serif;">reset</button>
+            <button class="b" onclick="appendToInput2(this.name)" name="bs" style="width:196px;height:50px;font-size:35px;font-family:'Times New Roman', Times, serif;">backspace</button>
+        </div>
+        <div id="num">
+            <button class="b" onclick="appendToInput('9')">9</button>
+            <button class="b" onclick="appendToInput('8')">8</button>
+            <button class="b" onclick="appendToInput('7')">7</button>
+            <button  class="b" onclick="appendToInput('*')">*</button>
+        </div>
+        <div id="num">
+            <button class="b" onclick="appendToInput('6')">6</button>
+            <button  class="b"onclick="appendToInput('5')">5</button>
+            <button class="b" onclick="appendToInput('4')">4</button>
+            <button class="b" onclick="appendToInput('/')">/</button>
+        </div>
+        <div id="num">
+            <button class="b" onclick="appendToInput('3')">3</button>
+            <button class="b" onclick="appendToInput('2')">2</button>
+            <button class="b" onclick="appendToInput('1')">1</button>
+            <button class="b" onclick="appendToInput('-')">-</button>
+        </div>
+        <div id="num">
+            <button class="b" onclick="appendToInput('.')">.</button>
+            <button class="b" onclick="appendToInput('0')">0</button>
+            <button class="b" onclick="appendToInput('=')">=</button>
+            <button class="b" onclick="appendToInput('+')">+</button>
+        </div>
+    </div>
+</body>
+</html>
