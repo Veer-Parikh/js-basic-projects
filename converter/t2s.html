@@ -4,8 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .hero {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(https://images.unsplash.com/photo-1572985025058-f27aeca1b8bf?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.39); /* Adjust the color and opacity of the overlay */
+            backdrop-filter: blur(1px); /* Apply blur to the overlay */
+        }
+
+        .hero-content {
+            position: relative; /* Ensure hero content is positioned relative to the hero div */
+            z-index: 1; /* Ensure hero content is above the overlay */
+            color: rgb(0, 0, 0); /* Text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 500;
+            margin-top: -50px;
+            margin-bottom: 50px;
+            color:rgb(33, 11, 114)
+        }
+        .hero span{
+            color:rgb(243, 56, 87)
+        }
+        textarea{
+            width:100%;
+            height:250px;
+            background: #413d849d;
+            color:white;
+            font-size: 15px;
+            border: 0px;
+            outline:0px;
+            padding:20px;
+            border-radius: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        textarea::placeholder{
+            color:rgba(240, 248, 255, 0.712)
+        }
+        .row{
+            width:600px;
+            display:flex;
+            align-items: center;
+            gap:20px;
+            margin-top: 20px;
+        }
+        button{
+            background-color:rgb(243, 56, 87) ;
+            color:antiquewhite;
+            font-size: 20px;
+            padding:10px 30px;
+            border:0px;
+            outline:0px;
+            cursor: pointer;
+            display: flex;
+            border-radius: 500px
+        }
+        img{
+            height:25px;
+            margin-right: 10px;
+        }
+        select{
+            flex:1;
+            color:white;
+            background-color: #403d84;
+            height:42px;
+            padding: 0px 10px;
+            border:0;
+            border-radius: 50px;
+            
+        }
+    </style>
 </head>
 <body>
-    hello
+    <div class="hero">
+        <div class="hero-content">
+            <h1>
+                Text to Speech <span>Converter</span>
+            </h1>
+            <textarea placeholder="Write anything here..."></textarea>
+            <div class="row">
+                <select></select>
+                <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/1024px-Speaker_Icon.svg.png">Listen</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script1.js"></script>
 </body>
 </html>
